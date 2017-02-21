@@ -1,0 +1,50 @@
+<section data-ng-controller="CvController" data-ng-init="find()">
+    <table data-ng-repeat="cv in cvs" data-ng-show="!cvs || cvs.length" id="cv_table">
+        <tr>
+            <th>CV {{cv.name}}</th><th>{{cv.created}}</th><th></th>
+        </tr>
+        <tr>
+            <td id="personal_info">
+                <h1>Personal Info</h1>
+                {{cv.name}}<br>
+                Address: {{cv.address}}<br>
+                Birthdate: {{cv.birthdate}}<br>
+                Email: {{cv.email}}<br>
+                Tel: {{cv.tel}}
+            </td>
+            <td><!-- Picture here --></td>
+        </tr>
+        <tr id="profile"><td><h1>Profile</h1>{{cv.profile}}</td></tr>
+        
+        <tr class="desc" id="work_experience">
+            <td><h1>Work experience</h1></td>
+            <td><div data-ng-repeat="field in cv.work_history">{{field}}</div></td>
+        </tr>
+        <tr class="desc" id="education">
+            <td><h1>Education</h1></td>
+            <td><div data-ng-repeat="field in cv.education">{{field}}</div></td>
+        </tr>
+        <tr class="desc" id="language_skills">
+            <td><h1>Language skills</h1></td>
+            <td><div data-ng-repeat="field in cv.language_skills">{{field}}</div></td>
+        </tr>
+        <tr class="desc" id="it_skills">
+            <td><h1>It Skills</h1></td>
+            <td><div data-ng-repeat="field in cv.it_skills">{{field}}</div></td>
+        </tr>
+        <tr class="desc" id="hobbies">
+            <td><h1>Hobbies</h1></td>
+            <td><div data-ng-repeat="field in cv.hobbies">{{field}}</div></td>
+        </tr>
+        <tr class="desc" id="references">
+            <td><h1>References</h1></td>
+            <td><div data-ng-repeat="field in cv.references">{{field}}</div></td>
+        </tr>
+    
+    </table>
+    
+    <div data-ng-hide="!cvs || cvs.length">
+        There is no CV
+    </div>
+
+</section>

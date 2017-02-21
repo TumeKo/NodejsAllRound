@@ -1,0 +1,54 @@
+<section data-ng-controller="CvController" data-ng-init="find();value='2ndview'">
+<div>Change the view
+    <input type="radio" ng-model="value" value="1stview" ng-change='changeView("cv")'>
+    <input type="radio" ng-model="value" value="2ndview" ng-change='changeView("cv2")'>
+</div>
+<div id="header"><h1>Resume</h1> {{cvs[0].created}}</div>
+<div id="main-wrap" data-ng-repeat="cv in cvs" data-ng-show="!cvs || cvs.length">
+    <div id="info-wrap">
+        <div class="info">
+            <h1>Personal Data</h1>
+            {{cv.name}}<br>
+            Address: {{cv.address}}<br>
+            Birthdate: {{cv.birthdate}}<br>
+            Email: {{cv.email}}<br>
+            Tel: {{cv.tel}}
+        </div>
+        <div class="info">
+            <img ng-src="/img/Picture.jpg" width="132" height="224"/>
+        </div>
+    </div>
+    <div class="profile">
+        <h1>Profile</h1>
+        <div>{{cv.profile}}</div>
+    </div>
+    <div id="skills-wrap">
+        <div class="field-wrap">
+            <div class="desc">Work History</div>
+            <div class="content" data-ng-repeat="field in cv.work_history"><li>{{field}}</li></div>
+        </div>
+        <div class="field-wrap">
+            <div class="desc">Education</div>
+            <div class="content" data-ng-repeat="field in cv.education"><li>{{field}}</li></div>
+        </div>
+        <div class="field-wrap">
+            <div class="desc">Language Skills</div>
+            <div class="content" data-ng-repeat="field in cv.language_skills"><li>{{field}}</li></div>
+        </div>
+        <div class="field-wrap">
+            <div class="desc">It Skills</div>
+            <div class="content" data-ng-repeat="field in cv.it_skills"><li>{{field}}</li></div>
+        </div>
+        <div class="field-wrap">
+            <div class="desc">Hobbies</div>
+            <div class="content" data-ng-repeat="field in cv.hobbies"><li>{{field}}</li></div>
+        </div>
+        <div class="field-wrap">
+            <div class="desc">References</div>
+            <div class="content" data-ng-repeat="field in cv.references"><li>{{field}}</li></div>
+        </div>
+        
+    </div>
+</div>
+<div id="footer"></div>
+</section>

@@ -1,0 +1,25 @@
+<section data-ng-controller="RecordsController" data-ng-init="findOne()">
+    <h1>Edit Record</h1>
+    <form data-ng-submit="update()" novalidate>
+        <div>
+            <label for="title">Title</label>
+            <div>
+                <input type="text" data-ng-model="record.title" id="title" placeholder="Title" required>
+            </div>
+        </div>
+        <div>
+            <label for="content">Content</label>
+            <div>
+                <textarea data-ng-model="record.content" id="content" cols="30" rows="10" placeholder="Content" required></textarea>
+            </div>
+        </div>
+        <div>
+            <input type="submit" value="Update">
+            <a href="/#!/records">Cancel</a>
+        </div>
+        <div data-ng-show="error">
+            <strong ng-data-bind="error"></strong>
+        </div>
+    </form>
+    
+</section>

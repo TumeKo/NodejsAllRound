@@ -1,0 +1,22 @@
+<section data-ng-controller="RecordsController" data-ng-init="findOne()">
+    <h1 data-ng-bind="record.title"></h1>
+    <div data-ng-show="authentication.user._id === record.creator._id">
+        <a href="/#!/records/{{record._id}}/edit">edit</a>
+        <a href="#" data-ng-click="delete();">delete</a>
+    </div>
+    <small>
+        <em>Posted on</em>
+        <em data-ng-bind="record.created | date:'mediumDate'"></em>
+        <em>by</em>
+        <em data-ng-bind="record.creator.fullName"></em>
+    </small>
+    <p data-ng-bind="record.title"></p>
+    <p data-ng-bind="record.weather"></p>
+    <p>lat: {{record.location[0]}}, long: {{record.location[1]}}</p>
+    <p data-ng-bind="record.name"></p>
+    <p data-ng-bind="record.weight"></p>
+    <p data-ng-bind="record.length"></p>
+    <p data-ng-bind="record.content"></p>
+    <img src="/records/image.jpg">
+    <a href="/#!/records">Back</a>
+</section>

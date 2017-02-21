@@ -1,0 +1,15 @@
+{
+    created: "14.2.2016",
+    name: "Tuomas Kontola",
+    address: "Ansatie 13, 02940 Espoo",
+    birthdate: "19.10.1996",
+    email: "tume.ko@hotmail.com",
+    tel: "0400469733",
+    profile: "I’m a calm and social 19 year old, who is very interested in information technology and media. Since I was eleven, I have studied programming. I started with python and lately I have mainly programmed with Java and Javascript. I also know Html and C# programming languages. Currently I’m developing android and Java games and apps. In my previous job I worked with eg. data migration, software testing and webpage maintenance using eg. Sharepoint and Excel. Examples of the programs I have written are attached.\n Since I was 13 I have attended many LAN-parties, and the last ten times I had them organized myself. There are usually eight to twelve participants.\n I studied in Kuninkaantie’s high school; and now I continue in Aalto University in the information technology line. Currently I’m doing my military service, which will end 16th of March 2016.",
+    work_history: ["2015 Neste Oy Summer trainee","2012 Shop assistant, Makuuni","2011 Shop assistant, K-market","2010 Delivering ”Länsiväylä” newspaper"],
+    education: ["2012-2015 Kuninkaantie’s high school","2009 upper-secondary school, Saarnilaakso school","2003 elementary, Auroran koulu","2013 Music Institute Juvenalia basic examination"],
+    language_skills: ["Finnish: native","English: excellent","Swedish: medium","German: basic"],
+    it_skills: ["Programming languages: Python ,Html, Java, Javascript, CSS and C#","Operating systems: Windows, Linux and Android","Office-programs"],
+    hobbies: ["Playing the clarinet (in Music Institute Juvenalia since 2005)","Programming","Computer games","Tennis, golf, ultimate, frisbee golf"],
+    references: ["Sirkku Hellman Neste Oyj Manager, HR services; sirkku.hellman@neste.com;0504584498"]
+}

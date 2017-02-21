@@ -1,0 +1,39 @@
+<section ng-controller="ChatController">
+    <style scoped>
+        
+        #chatWrap {
+            position: absolute;
+            bottom: 5%;
+            left: 1%;
+            background-color: lightslategray;
+            width: 100%
+        }
+        form {
+            background-color: aqua;
+            margin-top: 10px; 
+            padding: 5px;
+        }
+        
+    </style>
+    <div id="chatWrap">
+        <div ng_repeat="message in messages" ng-switch="message.type">
+            <strong ng-switch-when='status'>
+                <span ng-bind="message.created | date:'mediumTime'"></span>
+                <span ng_bind="message.username"></span>
+                <span>is</span>
+                <span ng-bind="message.text"></span>
+            </strong>
+            <span ng-switch-default>
+                <span ng-bind="message.created | date:'mediumTime'"></span>
+                <span ng_bind="message.username"></span>
+                <span>:</span>
+                <span ng-bind="message.text"></span>
+            </span>
+        </div>
+        <form ng-submit="sendMessage();">
+            <input type="text" ng-model="messageText">
+            <input type="submit">
+        </form>
+    </div>
+    
+</section>

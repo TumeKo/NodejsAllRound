@@ -1,0 +1,23 @@
+<section data-ng-controller="RecordsController" data-ng-init="find()">
+    <h1>Records</h1>
+    <ul>
+        <li data-ng-repeat="record in records">
+            <a data-ng-href="#!/records/{{record._id}}" data-ng-bind="record.title"></a>
+            <br>
+            <small data-ng-bind="record.created | date:'medium'"></small>
+            <small>/</small>
+            <small data-ng-bind="record.creator.fullName"></small>
+            <p data-ng-bind="record.title"></p>
+            <p data-ng-bind="record.weather"></p>
+            <p>lat: {{record.location[0]}}, long: {{record.location[1]}}</p>
+            <p data-ng-bind="record.name"></p>
+            <p data-ng-bind="record.weight"></p>
+            <p data-ng-bind="record.length"></p>
+            <p data-ng-bind="record.content"></p>
+        </li>
+    </ul>
+    <div data-ng-hide="!records || records.length">
+        No records yet, why don't you <a href="/#!/records/create">create one</a>?
+    </div>
+    <a href="/#!">Back</a>
+</section>
